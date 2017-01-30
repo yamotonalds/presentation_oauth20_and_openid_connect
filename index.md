@@ -88,10 +88,10 @@ OAuth 2.0の仕組みに乗っかって認証の仕組みを規定したもの
 
 ## 注目点
 
-- ユーザー(<img src="images/panda.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)の認証は認証サーバー(<img src="images/twitter-san.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)が必要だからやってる
+- ユーザー(<img src="images/panda.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)の認証は認可サーバー(<img src="images/twitter-san.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)が必要だからやってる
 - クライアント(<img src="images/mandra.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)はユーザー(<img src="images/panda.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)の認証情報を知らない
 - リソースオーナー(<img src="images/panda.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)はアクセストークンを知らない
-- リソースサーバー(<img src="images/twitter-san.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)はユーザーの認証情報やアクセストークンの入手経路は気にしない。アクセストークントークンが正しいかどうかだけが問題
+- リソースサーバー(<img src="images/twitter-san.png" style="display: inline-block; height: 1em; border: none; margin: 0 !important; vertical-align: middle;">)はユーザーの認証情報やアクセストークンの入手経路は気にしない。アクセストークンが正しいかどうかだけが問題
 
 
 ## ここで話さなかったこと
@@ -133,7 +133,7 @@ OAuth 2.0で行われるユーザーの認証はおまけだった。OpenID Conn
 - RP(Relying Party)
     - OAuth 2.0でいうところのクライアント
 - OP(OpenID Provider)
-    - OpenID ConnectをサポートするOAuth 2.0の認証サーバー
+    - OpenID ConnectをサポートするOAuth 2.0の認可サーバー
 
 
 ## プロセスフロー
@@ -160,6 +160,7 @@ ID TokenにはユーザーのID(sub)等が含まれている。
 
 ## 他にも
 
+- Hybrid Flow
 - 暗号化
 - 署名
 - 検証
